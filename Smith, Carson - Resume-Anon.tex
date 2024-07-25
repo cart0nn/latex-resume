@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Carson Smith
+% Based off of: https://github.com/sb2nov/resume and "Jake's Resume" by Jake Gutierrez
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{4.08003pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Carson Smith} \\ \vspace{1pt}
+    \small [No Number For Privacy] $|$ \href{mailto:carson-smith@cs-squared.org}{\underline{carson-smith@cs-squared.org}} $|$ 
+    \href{https://www.linkedin.com/in/carson-smith-0a624822a/}{\underline{linkedin.com/in/carson-smith-0a624822a}} $|$
+    \href{https://github.com/cart0nn}{\underline{github.com/cart0nn}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The University of Texas at Dallas}{Richardson, TX}
+      {Bachelor of Science in Computer Information Systems, Minor in Cybersecurity}{Aug. 2024 -- Present}
+    \resumeSubheading
+      {Allen High School}{Allen, TX}
+      {Foundation High School Program, Distinguished Level of Achievement}{Aug. 2020 -- May 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Co-Founder, QA Manager}{May 2024 -- Present}
+      {CS\_Squared}{Allen, TX}
+      \resumeItemListStart
+        \resumeItem{Tested, debugged, and approved all code before deployment}
+        \resumeItem{Wrote and maintained a collection of automated test scripts using Python to ensure proper functionality of all code}
+        \resumeItem{Ensured best practices were followed in code development and deployment}
+        \resumeItem{Served as a liaison between the development team and other departments to ensure proper communication}
+        \resumeItem{Spearheaded efforts to ensure standardization of code and documentation early in the company's development}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Back-End Developer}{August 2023 -- May 2024}
+      {Allen STEAM Life App}{Allen, TX}
+      \resumeItemListStart
+        \resumeItem{Utilized Amazon AWS to host the backend of the app}
+        \resumeItem{Managed various databases using DynamoDB and RDS store user data and app information}
+        \resumeItem{Maintained communication with project manager to ensure app and server security}
+        \resumeItem{Maintained communication with front-end developers to ensure proper data flow and app functionality}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Petrophysics Inc. Catalog Rewrite} $|$ \emph{TypeScript, SQL/SQLite, Pocketbase, React}}{July 2024 -- Present}
+        \resumeItemListStart
+          \resumeItem{Rewrote the Petrophysics Inc. seismic data catalog to improve performance and user experience}
+          \resumeItem{Utilized Pocketbase to manage the database and improve data retrieval times}
+          \resumeItem{Developed a React front-end to display the catalog and allow users to search for seismic logs and velocity surveys}
+          \resumeItem{Collaborated with web developers from CS\_Squared in order to smoothly implement the catalog on the website}  
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+      {\textbf{Personal Website} $|$ \emph{HTML, Node.js, Tailwind CSS, Astro, TypeScript, React}}{July 2024}
+        \resumeItemListStart
+          \resumeItem{Rewrote my personal website at \href{https://cart0nn.github.io}{\underline{cart0nn.github.io}} in order to update its content and improve its design.}
+          \resumeItem{Utilized Astro to generate static pages and improve performance.}
+          \resumeItem{Utilized Tailwind CSS to style the website and improve responsiveness.}
+          \resumeItem{Implemented a projects page to showcase my work and experience.}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{NASA Hunch Medical Inventory} $|$ \emph{Python, SQLite, Linux, Raspberry Pi}}{March 2024 -- April 2024}
+          \resumeItemListStart
+            \resumeItem{Developed a system to operate a mechanical arm to dispense medical supplies and an optical inventory detector}
+            \resumeItem{Utlized the SQLite library to generate and manage a database of inventory information}
+            \resumeItem{Maintained communication with mechanical engineer to ensure proper operation of the system}
+            \resumeItem{Qualified as a NASA Hunch finalist and presented the project to NASA engineers and astronauts}
+        \resumeItemListEnd
+      \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: LaTeX, HTML/CSS, Java, JavaScript, TypeScript, Python, SQL/PartiQL} \\
+     \textbf{Frameworks}{: Django, Flask, React, Tailwind CSS, Astro, WordPress} \\
+     \textbf{Developer Tools}{: Docker, Git/GitHub, Node.js, Vite, VS Code} \\
+     \textbf{Libraries}{: Matplotlib, NumPy, NLTK, OpenCV, Pandas, SQLite, Tkinter} \\
+     \textbf{Operating Systems}{: Linux (Arch, Debian, Kali, RPi OS, Ubuntu), Windows 8/10/11} \\
+     \textbf{Technologies}{: Amazon AWS, UEFI, VirtualBox, VMware} \\
+     \textbf{Productivity}{: Microsoft Office, Google Workspace, GitHub Projects}
+    }}
+ \end{itemize}
+
+%------------CREDENTIALS------------
+\section{Credentials}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{CompTIA Security+} $|$ \emph{In-Progress}}{August 2024}
+    \resumeProjectHeading
+      {\textbf{CompTIA A+} $|$ \emph{ID: COMP001022565935}}{July 2024}
+    \resumeProjectHeading
+      {\textbf{AP Scholar with Distinction}}{May 2023}
+  \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
